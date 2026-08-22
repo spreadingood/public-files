@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Deletion - RealDate</title>
+    <meta name="description" content="RealDate Account Deletion - learn how to delete your account and the data associated with it." />
+    <style>
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #1A1A1A;
+            --bg-surface: #1E1E1E;
+            --bg-card: #2A2A2A;
+            --teal-300: #40E0D0;
+            --teal-500: #00CED1;
+            --teal-600: #008B8B;
+            --text-primary: #FFFFFF;
+            --text-secondary: #E0E0E0;
+            --text-tertiary: #B0B0B0;
+            --text-muted: #808080;
+            --border: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-card) 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            line-height: 1.65;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        .app-header {
+            text-align: center;
+            padding: 40px 0 32px;
+        }
+
+        .app-logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-300));
+            box-shadow: 0 0 24px rgba(0, 206, 209, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .app-logo svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .app-tagline {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .document-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--teal-300);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .lead {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 28px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(0, 206, 209, 0.5);
+        }
+
+        h2:first-of-type {
+            margin-top: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin: 8px 0 16px 8px;
+            padding-left: 22px;
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 6px;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 10px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--teal-500);
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--teal-300);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 24px 0;
+        }
+
+        .back-to-top {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 32px;
+            background: var(--teal-500);
+            color: #0A0A0A;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 206, 209, 0.35);
+            transition: opacity 0.15s ease;
+        }
+
+        .back-to-top:hover {
+            opacity: 0.85;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--text-tertiary);
+        }
+
+        @media (max-width: 480px) {
+            .page {
+                padding: 16px 12px 48px;
+            }
+            .card {
+                padding: 24px 20px;
+            }
+            .document-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="app-header">
+            <div class="app-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21C12 21 4 14.6 4 9.5C4 6.5 6.4 4.5 9 4.5C10.2 4.5 11.4 5 12 5.8C12.6 5 13.8 4.5 15 4.5C17.6 4.5 20 6.5 20 9.5C20 14.6 12 21 12 21Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+            <div class="app-name">RealDate</div>
+            <div class="app-tagline">One Match. Real Connections.</div>
+        </header>
+
+        <main class="card">
+            <h1 class="document-title">Account Deletion</h1>
+            <p class="effective-date">Effective Date: [Insert Date]</p>
+
+            <p class="lead">RealDate (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy and giving you full control over your personal data. This page explains how you can permanently delete your RealDate account and the data associated with it.</p>
+
+            <hr />
+
+            <h2>1. Deleting Your Account In the App</h2>
+            <p>You can delete your account at any time directly from the RealDate app by following these steps:</p>
+            <ul>
+                <li>Open the RealDate app on your device</li>
+                <li>Go to the <strong>Settings</strong> tab</li>
+                <li>Scroll to the <strong>About</strong> section</li>
+                <li>Tap the <strong>Delete Account</strong> button</li>
+                <li>Confirm that you want to permanently delete your account</li>
+            </ul>
+            <p>Once confirmed, your account will be deleted immediately.</p>
+
+            <hr />
+
+            <h2>2. What Happens When You Delete Your Account</h2>
+            <p>When you delete your account, the following data is permanently removed from our systems:</p>
+            <ul>
+                <li>Your profile, photos, bio, and preferences</li>
+                <li>Your matches, swipes, and conversations</li>
+                <li>Your messages and chat history</li>
+                <li>Your notifications and account settings</li>
+            </ul>
+            <p>After deletion, you will no longer be able to log in or access any of your data. Any content you sent to other users will no longer be available.</p>
+
+            <hr />
+
+            <h2>3. No Data Retention</h2>
+            <p>We do <strong>not</strong> retain your account or personal data after deletion. When you delete your account, your information is permanently erased from our servers with <strong>no retention period</strong>. We do not keep backup copies of your profile, messages, or any other personal data.</p>
+            <p>There is no recovery option: once your account is deleted, it cannot be restored.</p>
+
+            <hr />
+
+            <h2>4. Unable to Access Your Account</h2>
+            <p>If you cannot access your account to delete it in the app, you may request deletion by contacting us at: <a href="mailto:realdate@spreadingood.com">realdate@spreadingood.com</a></p>
+            <p>Please include the email address associated with your account so we can verify your identity. We will process deletion requests within a reasonable timeframe.</p>
+
+            <hr />
+
+            <h2>5. Your Rights (GDPR)</h2>
+            <p>If you are located in the European Economic Area (EEA), you have the right to request the deletion of your personal data at any time. We will comply with such requests without undue delay and without retaining your data.</p>
+            <p>To exercise your rights, contact: <a href="mailto:realdate@spreadingood.com">realdate@spreadingood.com</a></p>
+
+            <hr />
+
+            <h2>6. Contact</h2>
+            <p>For any questions about account deletion or your personal data, email us at: <a href="mailto:realdate@spreadingood.com">realdate@spreadingood.com</a></p>
+
+            <button class="back-to-top" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+        </main>
+
+        <footer class="footer">
+            &copy; <span id="year"></span> RealDate. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
