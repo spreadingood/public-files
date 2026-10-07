@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RealDate is a dating app focused on meaningful connections — one match at a time.">
+  <meta name="theme-color" content="#07151d">
+  <title>RealDate — One match at a time</title>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#07151d;color:#eef7f7;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}
+    .nav{max-width:1100px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:25px;font-weight:800;letter-spacing:-.7px;text-decoration:none}
+    .brand span,.accent{color:#2dd4bf}
+    nav{display:flex;gap:25px}
+    nav a{color:#a9bdc2;text-decoration:none;font-size:14px}
+    nav a:hover{color:#2dd4bf}
+    .hero{max-width:1100px;margin:auto;padding:105px 24px 120px}
+    .badge{display:inline-block;border:1px solid #21434a;border-radius:999px;padding:6px 13px;color:#2dd4bf;font-size:13px;margin-bottom:25px}
+    h1{font-size:clamp(48px,8vw,86px);line-height:1.02;letter-spacing:-3px;margin:0 0 26px}
+    h1 span{color:#2dd4bf}
+    .lead{max-width:650px;color:#a9bdc2;font-size:20px;margin:0 0 34px}
+    .button{display:inline-block;background:#2dd4bf;color:#052026;text-decoration:none;font-weight:800;padding:13px 21px;border-radius:10px}
+    .button:hover{filter:brightness(1.08)}
+    .section{max-width:1100px;margin:auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid #173039}
+    .eyebrow{color:#2dd4bf;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:2px}
+    h2{font-size:42px;line-height:1.1;margin:10px 0}
+    .copy{color:#a9bdc2;font-size:17px}
+    .features{max-width:1100px;margin:auto;padding:30px 24px 100px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .features article{background:#0b2029;border:1px solid #163842;border-radius:14px;padding:27px}
+    .number{color:#2dd4bf;font-weight:800;font-size:13px}
+    h3{margin:12px 0 8px}
+    .features p{color:#9fb4b9;font-size:14px;margin:0}
+    .cta{max-width:1100px;margin:0 auto 80px;padding:70px 24px;text-align:center;background:#0b2029;border:1px solid #163842;border-radius:18px}
+    .cta p{color:#a9bdc2;max-width:600px;margin:0 auto 25px}
+    .cta h2{font-size:38px}
+    footer{border-top:1px solid #173039;max-width:1100px;margin:auto;padding:28px 24px 40px;display:flex;justify-content:space-between;color:#718a90;font-size:13px}
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{color:#718a90;text-decoration:none}
+    .footer-links a:hover{color:#2dd4bf}
+    @media(max-width:750px){
+      nav{display:none}
+      .hero{padding-top:70px}
+      .section{grid-template-columns:1fr;gap:20px}
+      .features{grid-template-columns:1fr 1fr}
+      h1{letter-spacing:-2px}
+      footer{flex-direction:column;gap:15px}
+    }
+    @media(max-width:450px){.features{grid-template-columns:1fr}.hero h1{font-size:49px}.cta{border-radius:0}}
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">Real<span>Date</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="badge">A different approach to online dating</div>
+      <h1>One match.<br><span>One person at a time.</span></h1>
+      <p class="lead">
+        RealDate is a dating app designed to put the focus back on getting to know
+        one person instead of endlessly collecting matches.
+      </p>
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.spreadingood.realdate">
+        Get RealDate on Google Play
+      </a>
+    </section>
+
+    <section id="about" class="section">
+      <div>
+        <p class="eyebrow">The idea</p>
+        <h2>Quality over quantity.</h2>
+      </div>
+      <div class="copy">
+        <p>
+          Most dating apps encourage endless swiping and an ever-growing list of
+          matches. RealDate takes a different approach: you can have only one
+          active match at a time.
+        </p>
+        <p>
+          If you decide to move on, you end your current match before looking for
+          another person. Less collecting, more connecting.
+        </p>
+      </div>
+    </section>
+
+    <section id="how" class="features">
+      <article>
+        <div class="number">01</div>
+        <h3>One active match</h3>
+        <p>Focus on one person instead of juggling dozens of matches.</p>
+      </article>
+
+      <article>
+        <div class="number">02</div>
+        <h3>Compatibility</h3>
+        <p>See how well your preferences and profiles match.</p>
+      </article>
+
+      <article>
+        <div class="number">03</div>
+        <h3>Detailed filters</h3>
+        <p>Use the criteria that matter to you when looking for a partner.</p>
+      </article>
+
+      <article>
+        <div class="number">04</div>
+        <h3>Free to use</h3>
+        <p>No subscription is required. Advertising helps cover operating costs.</p>
+      </article>
+    </section>
+
+    <section class="cta">
+      <h2>Looking for something real?</h2>
+      <p>
+        Give RealDate a try and see whether a slower, more focused approach
+        works for you.
+      </p>
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.spreadingood.realdate">
+        Download RealDate
+      </a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <strong>RealDate</strong><br>
+      <span>© 2026 RealDate. All rights reserved.</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://play.google.com/store/apps/details?id=com.spreadingood.realdate">Google Play</a>
+      <a href="mailto:realdate@spreadingood.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
